@@ -1,6 +1,6 @@
 import LogoNoTag from "../../../assets/images/Logo-no-tagline.png";
 
-export default function ServicesHero() {
+export default function ServicesHero({navigateToSection}) {
     return (
         <section className="bg-blue-50 px-6 py-20 md:px-12 lg:px-16">
             <div className="max-w-7xl mx-auto">
@@ -27,13 +27,13 @@ export default function ServicesHero() {
                             solutions that matter.
                         </p>
 
-                        <a
-                            href="mailto:info@inhova.in"
+                        <button
+                            onClick={()=>navigateToSection("contact")}
                             className="inline-flex items-center gap-3 bg-[#0068EC] hover:bg-[#0054C7] text-white text-sm font-medium px-7 py-3.5 rounded-lg transition duration-300"
                         >
                             Discuss Your Project
                             <span className="text-lg">→</span>
-                        </a>
+                        </button>
 
                     </div>
 

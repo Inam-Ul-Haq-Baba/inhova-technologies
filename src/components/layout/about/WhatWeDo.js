@@ -33,7 +33,7 @@ export default function WhatWeDo() {
     ];
 
     return (
-        <section className="bg-blue-100 rounded-lg mx-4 md:mx-6 px-6 py-20 md:px-12 lg:px-16">
+        <section id="whatwedo" className="bg-blue-100 rounded-lg mx-4 md:mx-6 px-6 py-20 md:px-12 lg:px-16">
             <div className="max-w-7xl mx-auto">
 
                 {/* Section Heading */}

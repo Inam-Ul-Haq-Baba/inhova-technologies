@@ -65,7 +65,7 @@ export default function AboutHero() {
                         </p>
 
                         <a
-                            href="/services"
+                            href="#whatwedo"
                             className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-800 text-white text-sm font-medium px-6 py-3 rounded-lg transition duration-300"
                         >
                             Explore Our Expertise
