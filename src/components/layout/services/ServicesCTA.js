@@ -1,4 +1,4 @@
-export default function ServicesCTA() {
+export default function ServicesCTA({navigateToSection} ) {
     return (
         <section className="bg-white px-6 py-16 md:px-12 lg:px-16">
             <div className="max-w-7xl mx-auto">
@@ -31,13 +31,12 @@ export default function ServicesCTA() {
                             Let's create something meaningful together.
                         </p>
 
-                        <a
-                            href="mailto:info@inhova.in"
+                        <button onClick={()=>navigateToSection("contact")}
                             className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-800 text-white text-sm font-medium px-7 py-3.5 rounded-lg transition duration-300"
                         >
                             Discuss Your Project
                             <span className="text-lg">→</span>
-                        </a>
+                        </button>
 
                     </div>
 

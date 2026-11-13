@@ -47,7 +47,7 @@ export default function WorkPreview() {
 
     return (
 
-        <section className="bg-[#F5F8FF] px-6 py-16 md:px-12 lg:px-16">
+        <section id="our-work" className="bg-[#F5F8FF] px-6 py-16 md:px-12 lg:px-16">
 
             <div className="max-w-7xl mx-auto">
 

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Logo from '../../assets/images/Logo.png';
 
-export default function Navbar({setActiveSection, activeSection}){
+export default function Navbar({navigateToSection, activeSection}){
 
     const [isOpen, setIsOpen] = useState(false);
 
@@ -15,10 +15,10 @@ export default function Navbar({setActiveSection, activeSection}){
             </div>
             
             <div className="hidden md:flex justify-between items-center gap-2 lg:gap-8">
-                <button className="rounded-2xl hover:bg-blue-600 active:bg-blue-400 hover:text-white px-3 py-1" onClick={()=>setActiveSection("home")}>Home</button>
-                <button className="rounded-2xl hover:bg-blue-600 active:bg-blue-400 hover:text-white px-3 py-1" onClick={()=>setActiveSection("about")}>About Us</button>
-                <button className="rounded-2xl hover:bg-blue-600 active:bg-blue-400 hover:text-white px-3 py-1" onClick={()=>setActiveSection("services")}>Services</button>
-                <button className="rounded-2xl hover:bg-blue-600 active:bg-blue-400 hover:text-white px-3 py-1" onClick={()=>setActiveSection("contact")}>Contact</button>
+                <button className={`rounded-2xl hover:bg-blue-600 active:bg-blue-400 hover:text-white px-3 py-1   ${activeSection === "home" ? "bg-blue-300 text-white" : "hover:bg-blue-600 hover:text-white"}   `} onClick={() => navigateToSection("home")}>Home</button>
+                <button className={`rounded-2xl hover:bg-blue-600 active:bg-blue-400 hover:text-white px-3 py-1   ${activeSection === "about" ? "bg-blue-300 text-white" : "hover:bg-blue-600 hover:text-white"}   `} onClick={() => navigateToSection("about")}>About Us</button>
+                <button className={`rounded-2xl hover:bg-blue-600 active:bg-blue-400 hover:text-white px-3 py-1   ${activeSection === "services" ? "bg-blue-300 text-white" : "hover:bg-blue-600 hover:text-white"}   `} onClick={() => navigateToSection("services")}>Services</button>
+                <button className={`rounded-2xl hover:bg-blue-600 active:bg-blue-400 hover:text-white px-3 py-1   ${activeSection === "contact" ? "bg-blue-300 text-white" : "hover:bg-blue-600 hover:text-white"}   `} onClick={() => navigateToSection("contact")}>Contact</button>
             </div>
             
             <div className="group block md:hidden">
@@ -29,10 +29,10 @@ export default function Navbar({setActiveSection, activeSection}){
                 </div>
 
                 <div className={`absolute top-20 right-2  ${isOpen ? "flex" : "hidden"} flex-col justify-start items-start gap-3 bg-blue-500 rounded-lg text-white py-2 w-1/3`}>
-                    <button className="rounded-2xl hover:bg-white hover:text-black active:bg-gray-600 active:text-slate-200 mx-2 px-3 py-1" onClick={() => {setIsOpen(false); setActiveSection("home")}} >Home</button>
-                    <button className="rounded-2xl hover:bg-white hover:text-black active:bg-gray-600 active:text-slate-200 mx-2 px-3 py-1" onClick={() => {setIsOpen(false); setActiveSection("about")}} >About Us</button>
-                    <button className="rounded-2xl hover:bg-white hover:text-black active:bg-gray-600 active:text-slate-200 mx-2 px-3 py-1" onClick={() => {setIsOpen(false); setActiveSection("services")}} >Services</button>
-                    <button className="rounded-2xl hover:bg-white hover:text-black active:bg-gray-600 active:text-slate-200 mx-2 px-3 py-1" onClick={() => {setIsOpen(false); setActiveSection("contact")}} >Contact</button>
+                    <button className={`rounded-2xl hover:bg-white hover:text-black active:bg-gray-600 active:text-slate-200 mx-2 px-3 py-1    ${activeSection === "home" ? "bg-blue-300 text-white" : "hover:bg-blue-600 hover:text-white"}      `} onClick={() => {setIsOpen(false); navigateToSection("home");}} >Home</button>
+                    <button className={`rounded-2xl hover:bg-white hover:text-black active:bg-gray-600 active:text-slate-200 mx-2 px-3 py-1    ${activeSection === "about" ? "bg-blue-300 text-white" : "hover:bg-blue-600 hover:text-white"}     `} onClick={() => {setIsOpen(false); navigateToSection("about");}} >About Us</button>
+                    <button className={`rounded-2xl hover:bg-white hover:text-black active:bg-gray-600 active:text-slate-200 mx-2 px-3 py-1    ${activeSection === "services" ? "bg-blue-300 text-white" : "hover:bg-blue-600 hover:text-white"}     `} onClick={() => {setIsOpen(false); navigateToSection("services");}} >Services</button>
+                    <button className={`rounded-2xl hover:bg-white hover:text-black active:bg-gray-600 active:text-slate-200 mx-2 px-3 py-1    ${activeSection === "contact" ? "bg-blue-300 text-white" : "hover:bg-blue-600 hover:text-white"}     `} onClick={() => {setIsOpen(false); navigateToSection("contact");}} >Contact</button>
                 </div>
 
             </div>

@@ -1,5 +1,6 @@
+import { useEffect } from "react";
 
-export default function ServiceDetails() {
+export default function ServiceDetails({ activeServiceId }) {
 
     const services = [
         {
@@ -64,6 +65,19 @@ export default function ServiceDetails() {
         }
     ];
 
+    useEffect(() => {
+    if (activeServiceId) {
+        const selectedService = document.getElementById(
+            `service-${activeServiceId}`
+        );
+
+        selectedService?.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+    }
+}, [activeServiceId]);
+
     return (
         <section className="bg-white px-6 py-20 md:px-12 lg:px-16">
             <div className="max-w-7xl mx-auto">
@@ -94,6 +108,7 @@ export default function ServiceDetails() {
 
                         <div
                             key={service.id}
+                            id={`service-${service.id}`}
                             className="bg-blue-50 border border-blue-100 rounded-2xl p-7 md:p-9 hover:border-blue-600/40 hover:shadow-lg transition duration-300"
                         >
 

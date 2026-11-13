@@ -1,7 +1,5 @@
-
 import LinkedIn from "../../../assets/icons/linkedin.svg";
 import Instagram from "../../../assets/icons/instagram.svg";
-import GitHub from "../../../assets/icons/github.svg";
 
 export default function ContactInfo() {
 
@@ -17,12 +15,6 @@ export default function ContactInfo() {
             name: "Instagram",
             icon: Instagram,
             url: "https://www.instagram.com/"
-        },
-        {
-            id: 3,
-            name: "GitHub",
-            icon: GitHub,
-            url: "https://github.com/"
         }
     ];
 

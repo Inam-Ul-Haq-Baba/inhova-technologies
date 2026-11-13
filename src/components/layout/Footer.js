@@ -2,16 +2,40 @@
 import LogoFull from "../../assets/images/Logo-full.png";
 import LinkedIn from "../../assets/icons/linkedin.svg";
 import Instagram from "../../assets/icons/instagram.svg";
-import GitHub from "../../assets/icons/github.svg";
 
-export default function Footer() {
+export default function Footer({navigateToSection, setActiveSection, setActiveServiceId }) {
 
     const exploreLinks = [
-        { id: 1, title: "Home", link: "/" },
-        { id: 2, title: "Services", link: "/services" },
-        { id: 3, title: "About Us", link: "/about" },
-        { id: 4, title: "Our Work", link: "/work" },
-        { id: 5, title: "Contact", link: "/contact" }
+        {
+            id: 1,
+            title: "Home",
+            action: () => navigateToSection("home")
+        },
+        {
+            id: 2,
+            title: "Services",
+            action: () => navigateToSection("services")
+        },
+        {
+            id: 3,
+            title: "About Us",
+            action: () => navigateToSection("about")
+        },
+        {
+            id: 4,
+            title: "Our Work",
+            action: () => {
+                navigateToSection("home")
+                document.getElementById("our-work")?.scrollIntoView({
+                    behavior: "smooth"
+                });
+            }
+        },
+        {
+            id: 5,
+            title: "Contact",
+            action: () => navigateToSection("contact")
+        }
     ];
 
     const services = [
@@ -32,12 +56,6 @@ export default function Footer() {
             id: 2,
             name: "Instagram",
             symbol: Instagram,
-            link: "#"
-        },
-        {
-            id: 3,
-            name: "GitHub",
-            symbol: GitHub,
             link: "#"
         }
     ];
@@ -76,15 +94,16 @@ export default function Footer() {
 
                         <ul className="flex flex-col gap-3">
 
-                            {exploreLinks.map((item) => (
-
-                                <li key={item.id}>
-                                    <a href={item.link} className="text-sm text-slate-300 hover:text-[#0090FB] transition duration-300" >
-                                        {item.title}
-                                    </a>
-                                </li>
-
-                            ))}
+                                {exploreLinks.map((item) => (
+                                    <li key={item.id}>
+                                        <button
+                                            onClick={item.action}
+                                            className="text-sm text-slate-300 hover:text-[#0090FB] transition duration-300"
+                                        >
+                                            {item.title}
+                                        </button>
+                                    </li>
+                                ))}
 
                         </ul>
 
@@ -103,9 +122,10 @@ export default function Footer() {
 
                                 <li key={service.id}>
 
-                                    <a href="/services" className="text-sm text-slate-300 hover:text-[#0090FB] transition duration-300" >
+                                    <button onClick={() => { setActiveServiceId(service.id); setActiveSection("services"); }}
+                                        className="text-sm text-slate-300 hover:text-[#0090FB] transition duration-300" >
                                         {service.title}
-                                    </a>
+                                    </button>
 
                                 </li>
 

@@ -1,28 +1,32 @@
 import React from 'react';
 
-export default function Expertise() {
+export default function Expertise({ setActiveSection, setActiveServiceId }) {
 
     const services = [
         {
             id: 1,
+            slug: "1",
             title: "Software Development",
             description: "Custom software and full-stack solutions.",
             icon: "⌘"
         },
         {
             id: 2,
+            slug: "2",
             title: "Web & Mobile",
             description: "Modern websites and applications.",
             icon: "▣"
         },
         {
             id: 3,
+            slug: "3",
             title: "UI/UX Design",
             description: "Intuitive and engaging experiences.",
             icon: "◎"
         },
         {
             id: 4,
+            slug: "4",
             title: "AI Solutions",
             description: "Practical intelligent technologies.",
             icon: "✳"
@@ -72,9 +76,9 @@ export default function Expertise() {
 
                             {/* Link */}
 
-                            <a href="/services" className="text-sm text-[#0068EC] hover:text-[#0054C7] transition" >
+                            <button onClick={() => { setActiveServiceId(service.id); setActiveSection("services");}} className="text-sm text-[#0068EC] hover:text-[#0054C7] transition" >
                                 Learn more ↗
-                            </a>
+                            </button>
 
                         </div>
 

@@ -1,7 +1,7 @@
 
 export default function ContactHero() {
     return (
-        <section className="bg-blue-50 px-6 py-20 md:px-12 lg:px-16">
+        <section className="bg-blue-50 px-6 py-10 md:px-12 lg:px-16">
             <div className="max-w-7xl mx-auto">
 
                 <div className="max-w-3xl mx-auto text-center">

@@ -5,7 +5,7 @@ import CoreValues from "./about/CoreValues";
 import AboutCTA from "./about/AboutCTA";
 import WhatWeDo from "./about/WhatWeDo";
 
-export default function About() {
+export default function About({navigateToSection}) {
 
     return (
         <>
@@ -17,7 +17,7 @@ export default function About() {
 
             <CoreValues />
 
-            <AboutCTA />
+            <AboutCTA navigateToSection={navigateToSection} />
         </>
     );
 

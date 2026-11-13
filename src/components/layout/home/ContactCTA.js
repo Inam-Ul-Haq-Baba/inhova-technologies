@@ -1,5 +1,5 @@
 
-export default function ContactCTA() {
+export default function ContactCTA({ navigateToSection }) {
 
     return (
 
@@ -29,9 +29,9 @@ export default function ContactCTA() {
 
 
                     {/* Contact Button */}
-                    <a href="/contact" className="flex items-center justify-center gap-2 w-full bg-[#0068EC] hover:bg-[#0054C7] text-white font-medium py-4 rounded-lg transition duration-300" >
+                    <button onClick={() => navigateToSection("contact")} className="flex items-center justify-center gap-2 w-full bg-[#0068EC] hover:bg-[#0054C7] text-white font-medium py-4 rounded-lg transition duration-300" >
                         Get in Touch <span>↗</span> 
-                    </a>
+                    </button>
 
 
                     {/* Email */}
