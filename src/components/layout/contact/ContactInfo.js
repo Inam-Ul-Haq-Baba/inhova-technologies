@@ -48,7 +48,7 @@ export default function ContactInfo() {
                     </h3>
 
                     <a
-                        href="mailto:info@inhova.in"
+                        href="https://mail.google.com/mail/?view=cm&fs=1&to=info@inhova.in"
                         className="text-sm text-slate-300 hover:text-[#60A5FA] transition"
                     >
                         info@inhova.in
