@@ -1,5 +1,5 @@
 
-import LogoFull from "../../assets/images/logo-full.png";
+import LogoFull from "../../assets/images/Logo-full.png";
 import LinkedIn from "../../assets/icons/linkedin.svg";
 import Instagram from "../../assets/icons/instagram.svg";
 import GitHub from "../../assets/icons/github.svg";
